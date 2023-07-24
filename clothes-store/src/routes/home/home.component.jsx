@@ -1,7 +1,8 @@
-import './categories.styles.scss';
-import CategoryItem from '../category-item/category-item.component';
+import CategoryMenu from '../../components/category-menu/categories.component';
 
-const CategoryMenu = () => {
+
+const Home = () => {
+
     const categories = [
         {
           "id": 1,
@@ -30,13 +31,9 @@ const CategoryMenu = () => {
         }
       ]
 
-    return (
-      <div className="categories-container">
-        {categories.map((category) => (
-          <CategoryItem key={category.id} category={category} />
-        ))}
-      </div>
-    );
-}
+  return (
+    <CategoryMenu categories={categories} />
+  ) 
+};
 
-export default CategoryMenu
+export default Home;
